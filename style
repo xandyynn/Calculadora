@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000000; 
+    padding: 20px;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 25px 50px rgba(255, 253, 253, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 400px;
+    animation: slideIn 0.5s ease-out;
+}
+
+.display {
+    background: rgba(251, 250, 250, 0.3);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: right;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.previous-operand {
+    color: rgba(11, 10, 10, 0.6);
+    font-size: 1.2rem;
+    min-height: 25px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.current-operand {
+    color: rgb(17, 16, 16);
+    font-size: 2.5rem;
+    font-weight: 300;
+    min-height: 50px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(22, 21, 21, 0.2);
+}
+
+.number {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+.number:hover {
+    background: white;
+}
+.divide, .multiply, .subtract, .add {
+    color: white; 
+}
+
+.divide {
+    background: #FFD700; 
+}
+
+.multiply {
+    background:#00FF7F; 
+}
+
+.subtract {
+    background:#4169E1; 
+}
+
+.add {
+    background: #FF1493;
+}
+
+.divide:hover {
+    background: #FFA500;
+}
+.multiply:hover {
+    background: #3CB371;
+}
+.subtract:hover {
+    background:#4169E1;
+}
+.add:hover {
+    background:#de348e;
+}
+
+.clear {
+    background: #fee140;
+    color: white;
+    grid-column: span 2;
+}
+
+.clear:hover {
+    background: #c6b13c;
+}
+
+.delete {
+    background:#ff6b6b;
+    color: white;
+}
+
+.delete:hover {
+    background: #ee5a6f;
+}
+
+.equals {
+    background: #4facfe;
+    color: white;
+}
+
+.equals:hover {
+    background: #00f2fe;
+}
+
+.zero {
+    grid-column: span 2;
+}
